@@ -30,12 +30,14 @@
                             <p class="card-text">
                                 {{ $product->category }} > {{ $product->subcategory }}
                             </p>
-                            <p>
-                                Stara cena: 
-                                <strike class="text-danger">
-                                    {{ $product->price_history }} RSD
-                                </strike>
-                            </p>
+                            @if($product->price_history)
+                                <p>
+                                    Stara cena: 
+                                    <strike class="text-danger">
+                                        {{ $product->price_history }} RSD
+                                    </strike>
+                                </p>
+                            @endif
                             <p class="h4 p-3 mb-2 bg-warning text-dark text-center">
                                 {{ $product->price }} RSD
                             </p>
