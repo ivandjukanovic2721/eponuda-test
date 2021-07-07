@@ -2,6 +2,8 @@
 composer install
 ```
 ```
+cp .env.example .env (linux) or
+copy .env.example .env (windows)
 php artisan key:generate
 ```
 ```
